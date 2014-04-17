@@ -1,9 +1,8 @@
 <p><h1>Listing Accounts from Salesforce Org</h1>
-<h2>Last synch with Salesforce = <%= if @triggerlog.created_at.nil? 
-		return "Never"
-	else
-		return @triggerlog.created_at
-	end %></h2></p>
+<h2>Last synch with Salesforce = <% if @triggerlog.nil? %> Never
+	<% else %>
+		<%= @triggerlog.created_at %>
+	<% end %></h2></p>
 
 <%= link_to 'Create New Account', new_account_path %>
 
