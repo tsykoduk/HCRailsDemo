@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+<tr>
+	<td>Name: </td>
+	<td><%= @account.name %></td>
+</tr>
+<tr>
+	<td>Ticker Symbol: </td>
+	<td><%= @account.tickersymbol %></td>
+</tr>
+<tr>
+	<td>Phone Number: </td>
+	<td><%= @account.phone %></td>
+</tr>
+<tr>
+	<td>Website: </td>
+	<td><a href=<%= @account.website %>><%= @account.website %></a></td>
+</tr>
+<tr>
+	<td>Street Address: </td>
+	<td><%= @account.billingstreet %></td>
+</tr>
+<tr>
+	<td>City: </td>
+	<td><%= @account.billingcity %></td>
+</tr>
+<tr>
+	<td>State: </td>
+	<td><%= @account.billingstate %></td>
+</tr>
+<tr>
+	<td>Postal Code: </td>
+	<td><%= @account.billingpostalcode %></td>
+</tr>
+<tr>
+	<td>Country: </td>
+	<td><%= @account.billingcountry %></td>
+</tr>
+<tr>
+	<td>Last Modified: </td>
+	<td><%= @account.lastmodifieddate %></td>
+</tr>
+</table>
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'List All Accounts', accounts_path %>
