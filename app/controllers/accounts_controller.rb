@@ -28,6 +28,8 @@ class AccountsController < ApplicationController
   def create
     @account = Account.new(account_params)
     
+    
+    # we need to force a simple account type
     @account.recordtypeid = "012F0000001HoUaIAK"
 
     respond_to do |format|
