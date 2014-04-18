@@ -56,5 +56,6 @@ After your first sync, your postgres table should look like this (use `\d salesf
      recordtypeid      | character varying(18)       | 
 
 Launch the app
+
 Profit
 
