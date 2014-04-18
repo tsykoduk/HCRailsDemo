@@ -10,7 +10,7 @@ Get a SE Demo Force app.
 
 Install this app onto Heroku, install a Postgres DB, and install Heroku Connect.
 
-Map the following fields over in HC:
+Map the following fields over in Heroku Connect:
 
  * billingstate      
  * fax               
@@ -28,7 +28,7 @@ Map the following fields over in HC:
  * tickersymbol
  * recordtypeid 
 
-Your postgres table should look like this (use `\d salesforce.account` to view it)
+After your first sync, your postgres table should look like this (use `\d salesforce.account` in `heroku pg:psql` to view it)
 
                                                 Table "salesforce.account"
           Column       |            Type             |                            Modifiers                            
@@ -56,6 +56,5 @@ Your postgres table should look like this (use `\d salesforce.account` to view i
      recordtypeid      | character varying(18)       | 
 
 Launch the app
-
 Profit
 
