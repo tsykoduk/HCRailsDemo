@@ -27,6 +27,8 @@ class AccountsController < ApplicationController
   # POST /accounts.json
   def create
     @account = Account.new(account_params)
+    
+    @account.recordtypeid = "012F0000001HoUaIAK"
 
     respond_to do |format|
       if @account.save
