@@ -30,7 +30,7 @@ Map the following fields over in HC:
 
 Your postgres table should look like this (use `\d salesforce.account` to view it)
   
-                                              Table "salesforce.account"
+`                                              Table "salesforce.account"
        Column       |            Type             |                            Modifiers                            
  -------------------+-----------------------------+-----------------------------------------------------------------
   billingstate      | character varying(80)       | 
@@ -53,7 +53,7 @@ Your postgres table should look like this (use `\d salesforce.account` to view i
   phone             | character varying(40)       | 
   website           | character varying(255)      | 
   tickersymbol      | character varying(20)       | 
-  recordtypeid      | character varying(18)       | 
+  recordtypeid      | character varying(18)       | `
 
 Launch the app
 
