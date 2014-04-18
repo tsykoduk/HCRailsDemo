@@ -29,31 +29,31 @@ Map the following fields over in HC:
  * recordtypeid 
 
 Your postgres table should look like this (use `\d salesforce.account` to view it)
-  
-`                                              Table "salesforce.account"
-       Column       |            Type             |                            Modifiers                            
- -------------------+-----------------------------+-----------------------------------------------------------------
-  billingstate      | character varying(80)       | 
-  fax               | character varying(40)       | 
-  billinglatitude   | double precision            | 
-  accountsource     | character varying(40)       | 
-  billingcity       | character varying(40)       | 
-  id                | integer                     | not null default nextval('salesforce.account_id_seq'::regclass)
-  billingcountry    | character varying(80)       | 
-  _c5_source        | character varying(18)       | 
-  name              | character varying(255)      | 
-  accountnumber     | character varying(40)       | 
-  billingpostalcode | character varying(20)       | 
-  description       | text                        | 
-  sfid              | character varying(18)       | 
-  billingstreet     | character varying(255)      | 
-  isdeleted         | boolean                     | 
-  billinglongitude  | double precision            | 
-  lastmodifieddate  | timestamp without time zone | 
-  phone             | character varying(40)       | 
-  website           | character varying(255)      | 
-  tickersymbol      | character varying(20)       | 
-  recordtypeid      | character varying(18)       | `
+
+                                                Table "salesforce.account"
+          Column       |            Type             |                            Modifiers                            
+    -------------------+-----------------------------+-----------------------------------------------------------------
+     billingstate      | character varying(80)       | 
+     fax               | character varying(40)       | 
+     billinglatitude   | double precision            | 
+     accountsource     | character varying(40)       | 
+     billingcity       | character varying(40)       | 
+     id                | integer                     | not null default nextval('salesforce.account_id_seq'::regclass)
+     billingcountry    | character varying(80)       | 
+     _c5_source        | character varying(18)       | 
+     name              | character varying(255)      | 
+     accountnumber     | character varying(40)       | 
+     billingpostalcode | character varying(20)       | 
+     description       | text                        | 
+     sfid              | character varying(18)       | 
+     billingstreet     | character varying(255)      | 
+     isdeleted         | boolean                     | 
+     billinglongitude  | double precision            | 
+     lastmodifieddate  | timestamp without time zone | 
+     phone             | character varying(40)       | 
+     website           | character varying(255)      | 
+     tickersymbol      | character varying(20)       | 
+     recordtypeid      | character varying(18)       | 
 
 Launch the app
 
