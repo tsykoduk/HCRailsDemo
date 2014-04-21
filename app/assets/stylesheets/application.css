@@ -319,7 +319,7 @@ ul.three-column>li:last-child {
     }
 }
 
-.button {
+#button {
     transition: all 0.2s;
     font-family: "proxima-nova", "helvetica neue", helvetica, arial;
     font-size: 16px;
