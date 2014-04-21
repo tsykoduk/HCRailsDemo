@@ -17,7 +17,7 @@
     <% @accounts.each do |account| %>
       <tr>
 		<!--<td><%= account.id %></td>-->
-		<td><%= account.name %></td>
+		<td><a href=<%= account %>><%= account.name %></a></td>
 		<td><a href=<%= account.website %>><%= account.website %></a></td>
 		<td><%= account.billingcity %></td>
         <td><%= link_to 'Show', account %></td>
