@@ -12,17 +12,17 @@ Install this app onto Heroku, install a Postgres DB, and install Heroku Connect.
 
 Map the following fields over in Heroku Connect:
 
- * billingstate      
- * fax               
- * billinglatitude   
- * accountsource     
+ * billingstate 
+ * billingpostalcode
+ * billingcountry
+ * billinglatitude
  * billingcity       
- * billingcountry    
+ * billingstreet    
+ * accountsource
+ * accountnumber  
+ * fax          
  * name              
- * accountnumber     
- * billingpostalcode 
  * description      
- * billingstreet      
  * phone  
  * website
  * tickersymbol
