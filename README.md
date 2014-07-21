@@ -10,6 +10,23 @@ Get a SE Demo Force app.
 
 Install this app onto Heroku, install a Postgres DB, and install Heroku Connect.
 
+
+
+```
+git clone https://github.com/tsykoduk/HCRailsDemo
+cd HCRailsDemo
+heroku create <<my-hconnect-app>>
+heroku addons:add heroku-postgresql:dev
+heroku addons:add herokuconnect:test
+git push heroku master
+heroku run rake db:migrate
+```
+
+Now Launch https://dashboard.heroku.com/ and locate your newly created app 
+Click on Heroku Connect under Add-Ons
+
+Once you launch Heroku connect, you will be asked to create a new schema and connection to your salesforce org.
+
 Map the following fields over in Heroku Connect:
 
  * billingstate 
@@ -56,6 +73,8 @@ After your first sync, your postgres table should look like this (use `\d salesf
      recordtypeid      | character varying(18)       | 
 
 Launch the app
-
+```
+heroku open
+```
 Profit
 
