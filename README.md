@@ -16,7 +16,6 @@ Install this app onto Heroku, install a Postgres DB, and install Heroku Connect.
 git clone https://github.com/tsykoduk/HCRailsDemo
 cd HCRailsDemo
 heroku create <<my-hconnect-app>>
-heroku addons:add heroku-postgresql:dev
 heroku addons:add herokuconnect:test
 git push heroku master
 heroku run rake db:migrate
