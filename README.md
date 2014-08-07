@@ -16,13 +16,12 @@ Click on this button:
 
 Or, deploy the app by hand:
 
-Install this app onto Heroku, install a Postgres DB, and install Heroku Connect.
-
-
 ```
 git clone https://github.com/tsykoduk/HCRailsDemo
 cd HCRailsDemo
 heroku create 
+heroku addons:add papertrail
+heroku addons:add newrelic-stark
 git push heroku master
 ```
 
@@ -56,7 +55,7 @@ Map the following fields over in Heroku Connect:
  * tickersymbol
  * recordtypeid 
 
-After your first sync, your postgres table should look like this (use `\d salesforce.account` in `heroku pg:psql` to view it)
+After your first sync, your Postgres table should look like this (use `\d salesforce.account` in `heroku pg:psql` to view it)
 
                                                 Table "salesforce.account"
           Column       |            Type             |                            Modifiers                            
