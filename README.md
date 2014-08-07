@@ -6,13 +6,15 @@ Just a rails CRUD app to demo heroku connect.
 Setup
 =====
 
+You **must** have access to Heroku Connect to deploy this app. If you do not have access, contact [Heroku Sales](https://www.heroku.com/connect). Scroll to the bottom and fill out the Contact Us form.
+
 Get a SE Demo Force app.
 
-Click on this button:
+<!---Click on this button:
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy) -->
 
-Or, follow these directions
+Or, deploy the app by hand:
 
 Install this app onto Heroku, install a Postgres DB, and install Heroku Connect.
 
@@ -23,7 +25,6 @@ cd HCRailsDemo
 heroku create 
 heroku addons:add herokuconnect:test
 git push heroku master
-heroku run rake db:migrate
 ```
 
 Now Launch https://dashboard.heroku.com/ and locate your newly created app.
