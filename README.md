@@ -23,8 +23,13 @@ Install this app onto Heroku, install a Postgres DB, and install Heroku Connect.
 git clone https://github.com/tsykoduk/HCRailsDemo
 cd HCRailsDemo
 heroku create 
-heroku addons:add herokuconnect:test
 git push heroku master
+```
+
+You'll need to add the Heroku Connect addon by hand:
+
+```
+heroku addons:add herokuconnect:test
 ```
 
 Now Launch https://dashboard.heroku.com/ and locate your newly created app.
