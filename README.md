@@ -21,7 +21,8 @@ git push heroku master
 heroku run rake db:migrate
 ```
 
-Now Launch https://dashboard.heroku.com/ and locate your newly created app 
+Now Launch https://dashboard.heroku.com/ and locate your newly created app.
+ 
 Click on Heroku Connect under Add-Ons
 
 Once you launch Heroku connect, you will be asked to create a new schema and connection to your salesforce org.
