@@ -5,7 +5,7 @@
   "website": "https://github.com/tsykoduk/HCRailsDemo",
   "repository": "https://github.com/tsykoduk/HCRailsDemo",
   "logo": "http://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
-  "scripts": { },
+  "scripts": {},
   "env": {
     "RAILS_ENV": "production"
   },
