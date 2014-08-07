@@ -10,8 +10,7 @@
   "repository": "https://github.com/tsykoduk/HCRailsDemo",
   "success_url": "/",
   "scripts": {},
-  "env": {}
-  },
+  "env": {},
   "addons": [
     "heroku-postgresql"
 	"herokuconnect:test"
