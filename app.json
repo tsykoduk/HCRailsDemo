@@ -8,10 +8,16 @@
   ],
   "website": "https://github.com/tsykoduk/HCRailsDemo",
   "repository": "https://github.com/tsykoduk/HCRailsDemo",
-  "success_url": "/",
   "scripts": {},
-  "env": {},
+  "env": {
+      "RAILS_ENV": "production",
+      "COOKIE_SECRET": {
+              "description": "This gets generated",
+              "generator": "secret"
+      }
+  },
   "addons": [
+	"heroku-postgres",
 	"herokuconnect:test",
 	"newrelic:stark"
   ]

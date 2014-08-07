@@ -10,9 +10,9 @@ You **must** have access to Heroku Connect to deploy this app. If you do not hav
 
 Get a SE Demo Force app.
 
-<!---Click on this button:
+Click on this button:
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy) -->
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 Or, deploy the app by hand:
 
