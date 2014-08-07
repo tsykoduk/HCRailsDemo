@@ -1,0 +1,20 @@
+{
+  "name": "HCRailsDemo",
+  "description": "A super basic rails CRUD app to showcase heroku connect.",
+  "keywords": [
+    "heroku connect",
+    "sfdc",
+    "productivity"
+  ],
+  "website": "https://github.com/tsykoduk/HCRailsDemo",
+  "repository": "https://github.com/tsykoduk/HCRailsDemo",
+  "success_url": "/",
+  "scripts": {},
+  "env": {}
+  },
+  "addons": [
+    "heroku-postgresql"
+	"herokuconnect:test"
+	"newrelic:stark"
+  ]
+}

@@ -8,8 +8,13 @@ Setup
 
 Get a SE Demo Force app.
 
-Install this app onto Heroku, install a Postgres DB, and install Heroku Connect.
+Click on this button:
 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+Or, follow these directions
+
+Install this app onto Heroku, install a Postgres DB, and install Heroku Connect.
 
 
 ```
