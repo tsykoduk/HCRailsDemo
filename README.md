@@ -12,7 +12,7 @@ Get a SE Demo Force app.
 
 Click on this button:
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 Or, deploy the app by hand:
 
