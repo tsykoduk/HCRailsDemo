@@ -1,25 +1,14 @@
+
 {
-  "name": "HCRailsDemo",
+  "name": "Heroku Connect Rails Demo",
   "description": "A super basic rails CRUD app to showcase Heroku Connect.",
-  "logo": "http://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
-  "keywords": [
-    "connect",
-    "sfdc",
-    "productivity"
-  ],
   "website": "https://github.com/tsykoduk/HCRailsDemo",
   "repository": "https://github.com/tsykoduk/HCRailsDemo",
-  "scripts": {},
+  "logo": "http://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
+  "scripts": { },
   "env": {
-      "RAILS_ENV": "production",
-      "COOKIE_SECRET": {
-              "description": "This gets generated",
-              "generator": "secret"
-      }
+    "RAILS_ENV": "production"
   },
-  "addons": [
-	"heroku-postgres",
-	"herokuconnect:test",
-	"newrelic:stark"
-  ]
+  "addons": ["heroku-postgresql", "herokuconnect:test", "newrelic:stark"]
+
 }
