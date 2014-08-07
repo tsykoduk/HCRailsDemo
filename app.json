@@ -2,7 +2,7 @@
   "name": "HCRailsDemo",
   "description": "A super basic rails CRUD app to showcase heroku connect.",
   "keywords": [
-    "heroku connect",
+    "connect",
     "sfdc",
     "productivity"
   ],
@@ -12,8 +12,8 @@
   "scripts": {},
   "env": {},
   "addons": [
-    "heroku-postgresql"
-	"herokuconnect:test"
+    "heroku-postgresql",
+	"herokuconnect:test",
 	"newrelic:stark"
   ]
 }
