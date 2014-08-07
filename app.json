@@ -1,6 +1,7 @@
 {
   "name": "HCRailsDemo",
   "description": "A super basic rails CRUD app to showcase Heroku Connect.",
+  "logo": "http://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
   "keywords": [
     "connect",
     "sfdc",
