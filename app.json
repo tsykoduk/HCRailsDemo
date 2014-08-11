@@ -9,6 +9,6 @@
   "env": {
     "RAILS_ENV": "production"
   },
-  "addons": ["heroku-postgresql", "newrelic:stark", "papertrail", "herokuconnect:test"]
+  "addons": ["heroku-postgresql", "newrelic:stark", "papertrail"]
 
 }
