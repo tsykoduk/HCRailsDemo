@@ -1,0 +1,7 @@
+mappings:
+- fields: [AccountNumber, AccountSource, BillingCity, BillingCountry, BillingLatitude,
+    BillingLongitude, BillingPostalCode, BillingState, BillingStreet, CreatedDate,
+    Description, Fax, Id, IsDeleted, LastModifiedDate, Name, Phone, RecordTypeId,
+    TickerSymbol, Website]
+  object_name: Account
+  table_name: account
