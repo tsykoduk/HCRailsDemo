@@ -21,7 +21,7 @@ git clone https://github.com/tsykoduk/HCRailsDemo
 cd HCRailsDemo
 heroku create 
 heroku addons:add papertrail
-heroku addons:add newrelic-stark
+heroku addons:add newrelic:stark
 git push heroku master
 ```
 
