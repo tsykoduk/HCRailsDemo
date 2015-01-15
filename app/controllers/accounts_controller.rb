@@ -30,7 +30,7 @@ class AccountsController < ApplicationController
     
     
     # we need to force a simple account type
-    @account.recordtypeid = "012F0000001HoUaIAK"
+    #@account.recordtypeid = "012F0000001HoUaIAK"
 
     respond_to do |format|
       if @account.save
