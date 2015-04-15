@@ -29,7 +29,7 @@
       <tr>
 		<!--<td><%= account.id %></td>-->
 		<td><%= link_to account.name, account %></td>
-		<td><a href=<%= account.website %>><%= account.website %></a></td>
+		<td><a href="http://<%= account.website %>"><%= account.website %></a></td>
 		<td><%= account.billingcity %></td>
         <td><%= link_to 'Show', account %></td>
         <td><%= link_to 'Edit', edit_account_path(account) %></td>
