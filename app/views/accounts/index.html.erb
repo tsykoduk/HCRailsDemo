@@ -1,0 +1,42 @@
+
+<div class="center">
+
+<h1>Listing Accounts from Salesforce Org</h1>
+
+</div>
+
+</br>
+</br>
+
+<div id=.button ><%= link_to 'Create New Account', new_account_path %></div>
+
+</br>
+</br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Account Name</th>
+      <th>Website</th>
+      <th>City</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+		<!--<td><%= account.id %></td>-->
+		<td><%= link_to account.name, account %></td>
+		<td><a href="http://<%= account.website %>"><%= account.website %></a></td>
+		<td><%= account.billingcity %></td>
+        <td><%= link_to 'Show', account %></td>
+        <td><%= link_to 'Edit', edit_account_path(account) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</div>
+</table>
+
+

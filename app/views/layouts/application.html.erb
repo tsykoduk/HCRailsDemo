@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ConnectDemoApp</title>
+  
+         <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+         <link rel="stylesheet" href="/css/purple.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <script src="/js/purple.js" type="text/javascript" charset="utf-8"></script>
+        <%= csrf_meta_tags %>
+</head>
+<body>
+	<header id="header" class="gradient-primary">
+		<div class="container text-center">
+			<div class="title">Account List</div>
+            </div>
+        </div>
+    </header>
+        <div id="content" class="container">
+            <%= yield %>
+        </div>
+</body>
+</html>

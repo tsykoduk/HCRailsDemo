@@ -1,0 +1,58 @@
+<%= form_for(@account) do |f| %>
+  <% if @account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+      <% @account.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table>
+<tr>
+	<td>Name: </td>
+	<td><%= f.text_field :name %></td>
+</tr>
+<tr>
+	<td>Ticker Symbol: </td>
+	<td><%= f.text_field :tickersymbol %></td>
+</tr>
+<tr>
+	<td>Phone Number: </td>
+	<td><%= f.text_field :phone  %></td>
+</tr>
+<tr>
+	<td>Website: </td>
+	<td><%= f.text_field :website %></td>
+</tr>
+<tr>
+	<td>Street Address: </td>
+	<td><%= f.text_field :billingstreet %></td>
+</tr>
+<tr>
+	<td>City: </td>
+	<td><%= f.text_field :billingcity %></td>
+</tr>
+<tr>
+	<td>State: </td>
+	<td><%= f.text_field :billingstate %></td>
+</tr>
+<tr>
+	<td>Postal Code: </td>
+	<td><%= f.text_field :billingpostalcode %></td>
+</tr>
+<tr>
+	<td>Country</td>
+	<td><%= f.text_field :billingcountry %></td>
+</tr>
+</table>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
