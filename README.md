@@ -38,7 +38,7 @@ Click on Heroku Connect under Add-Ons
 
 Once you launch Heroku connect, you will be asked to create a new schema and connection to your salesforce org.
 
-Map the following fields over in Heroku Connect:
+Map the following fields over in Heroku Connect, or just import the ```ggn-rails-hc_Salesforce.yaml``` file to load the configuration:
 
  * billingstate 
  * billingpostalcode

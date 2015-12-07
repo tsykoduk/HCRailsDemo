@@ -1,15 +1,26 @@
-<p><h1>Listing Accounts from Salesforce Org</h1>
-<h2>Last synch with Salesforce = <% if @triggerlog.nil? %> Never
-	<% else %>
-		<%= @triggerlog.created_at %>
-	<% end %></h2></p>
+
+<div class="center">
+
+<h1>Listing Accounts from Salesforce Org</h1>
+
+</div>
+
+</br>
+</br>
 
 <div id=.button ><%= link_to 'Create New Account', new_account_path %></div>
 
-<table>
+</br>
+</br>
+
+<table class="table">
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th>Account Name</th>
+      <th>Website</th>
+      <th>City</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -18,15 +29,14 @@
       <tr>
 		<!--<td><%= account.id %></td>-->
 		<td><%= link_to account.name, account %></td>
-		<td><a href=<%= account.website %>><%= account.website %></a></td>
+		<td><a href="http://<%= account.website %>"><%= account.website %></a></td>
 		<td><%= account.billingcity %></td>
         <td><%= link_to 'Show', account %></td>
         <td><%= link_to 'Edit', edit_account_path(account) %></td>
       </tr>
     <% end %>
   </tbody>
+</div>
 </table>
-
-<br>
 
 

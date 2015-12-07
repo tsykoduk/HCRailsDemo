@@ -1,0 +1,29 @@
+a, a:active, a:hover {
+	text-decoration:none;
+}
+
+.title {
+	color: white;
+	padding-top: 50px;
+	font-size: 2em;
+}
+
+.smalltitle {
+	color: white;
+	padding-bottom: 50px;
+	font-size: 1em;
+}
+
+.center {
+	text-align: center;
+}
+.smallsavebox {
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+
+table .small {
+  max-width: 50%;
+  background-color: transparent; 
+}

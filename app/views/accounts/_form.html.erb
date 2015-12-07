@@ -1,3 +1,6 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+
 <%= form_for(@account) do |f| %>
   <% if @account.errors.any? %>
     <div id="error_explanation">
@@ -11,7 +14,7 @@
     </div>
   <% end %>
 
-<table>
+<table class="table">
 <tr>
 	<td>Name: </td>
 	<td><%= f.text_field :name %></td>
@@ -51,8 +54,16 @@
 </table>
 
 
+</br>
+</br>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="center">    
+      <div class="btn btn-default">
+          <%= f.submit %>
+      </div>
   </div>
+</br>
 <% end %>
+
+</div>
+</div>
