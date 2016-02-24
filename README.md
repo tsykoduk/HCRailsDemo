@@ -20,7 +20,7 @@ Or, deploy the app by hand:
 git clone https://github.com/tsykoduk/HCRailsDemo
 cd HCRailsDemo
 heroku create 
-heroku addons:create herokuconnect:test
+heroku addons:create herokuconnect:demo
 heroku addons:add papertrail
 heroku addons:add newrelic:stark
 git push heroku master
