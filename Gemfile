@@ -44,3 +44,6 @@ gem 'rails_12factor', group: :production
 # For New Relic
 gem 'newrelic_rpm'
 
+# For random stuff
+gem 'faker'
+
