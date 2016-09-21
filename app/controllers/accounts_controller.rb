@@ -4,7 +4,7 @@ class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.json
   def index
-    @accounts = Account.first(100).order('id DESC')
+    @accounts = Account.first(100)
     @triggerlog = Triggerlog.last
   end
 
