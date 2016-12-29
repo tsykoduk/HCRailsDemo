@@ -1,12 +1,12 @@
 HCRailsDemo
 ===========
 
-Just a rails CRUD app to demo heroku connect.
+Just a rails CRUD app to demo Heroku connect.
+
 
 Setup
 =====
 
-You **must** have access to Heroku Connect to deploy this app. If you do not have access, contact [Heroku Sales](https://www.heroku.com/connect). Scroll to the bottom and fill out the Contact Us form.
 
 Get a SE Demo Force app.
 
@@ -20,15 +20,10 @@ Or, deploy the app by hand:
 git clone https://github.com/tsykoduk/HCRailsDemo
 cd HCRailsDemo
 heroku create 
+heroku addons:create herokuconnect:demo
 heroku addons:add papertrail
 heroku addons:add newrelic:stark
 git push heroku master
-```
-
-You'll need to add the Heroku Connect addon by hand:
-
-```
-heroku addons:add herokuconnect:test
 ```
 
 Now Launch https://dashboard.heroku.com/ and locate your newly created app.
@@ -37,7 +32,7 @@ Click on Heroku Connect under Add-Ons
 
 Once you launch Heroku connect, you will be asked to create a new schema and connection to your salesforce org.
 
-Map the following fields over in Heroku Connect:
+Map the following fields over in Heroku Connect, or just import the ```ggn-hcdemo_connect_config.json``` file to load the configuration:
 
  * billingstate 
  * billingpostalcode
