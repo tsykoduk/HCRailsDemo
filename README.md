@@ -3,6 +3,7 @@ HCRailsDemo
 
 Just a rails CRUD app to demo Heroku connect.
 
+And this is a silly change
 
 Setup
 =====
