@@ -1,1 +1,52 @@
-{"mappings": [{"config": {"access": "read_write", "sf_polling_seconds": 600, "sf_max_daily_api_calls": 30000, "sf_notify_enabled": true, "fields": {"LastModifiedDate": {}, "AccountNumber": {}, "BillingStreet": {}, "IsDeleted": {}, "Description": {}, "Fax": {}, "Name": {}, "BillingLatitude": {}, "Id": {}, "Website": {}, "Phone": {}, "BillingPostalCode": {}, "CreatedDate": {}, "AccountSource": {}, "BillingLongitude": {}, "BillingCity": {}, "TickerSymbol": {}, "BillingCountry": {}, "BillingState": {}}, "applied_at": "2015-09-11T20:53:06.697Z"}, "object_name": "Account"}], "version": 1, "connection": {"exported_at": "2015-12-07T22:57:31.240928+00:00", "app_name": "ggn-hcdemo", "organization_id": "00Di0000000JYDzEAO"}}
+{
+  "version": 1,
+  "mappings": [
+    {
+      "object_name": "Account",
+      "config": {
+        "applied_at": "2017-10-09T20:58:42.255402Z",
+        "sf_notify_enabled": true,
+        "upsert_field": "external_id__c",
+        "indexes": {
+          "Id": {
+            "unique": true
+          },
+          "external_id__c": {
+            "unique": true
+          },
+          "LastModifiedDate": {
+            "unique": false
+          }
+        },
+        "access": "read_write",
+        "sf_max_daily_api_calls": 30000,
+        "sf_polling_seconds": 600,
+        "fields": {
+          "IsDeleted": {},
+          "BillingCountry": {},
+          "Id": {},
+          "AccountSource": {},
+          "BillingPostalCode": {},
+          "BillingCity": {},
+          "BillingState": {},
+          "Description": {},
+          "BillingLatitude": {},
+          "Website": {},
+          "Phone": {},
+          "Fax": {},
+          "CreatedDate": {},
+          "BillingStreet": {},
+          "LastModifiedDate": {},
+          "external_id__c": {},
+          "Name": {},
+          "BillingLongitude": {}
+        }
+      }
+    }
+  ],
+  "connection": {
+    "organization_id": "00D41000000FrplEAC",
+    "exported_at": "2017-10-09T21:08:09.453795+00:00",
+    "app_name": "hcrails-dev-pr-9"
+  }
+}
