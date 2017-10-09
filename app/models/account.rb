@@ -4,8 +4,8 @@ class Account < ActiveRecord::Base
    
    def assign_uuid
      uuid = SecureRandom.uuid + Time.now().to_i.to_s
-     Self.external_id__c = uuid
-     Self.save
+     self.external_id__c = uuid
+     self.save
    end
    
   
