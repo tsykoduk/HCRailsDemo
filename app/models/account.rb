@@ -9,7 +9,6 @@ class Account < ActiveRecord::Base
    def assign_uuid
      self.external_id__c = SecureRandom.uuid + Time.now().to_i.to_s
    end
- end
    
   
 end
