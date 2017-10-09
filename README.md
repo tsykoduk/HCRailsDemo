@@ -85,3 +85,20 @@ Launch the app
 heroku open
 ```
 Profit
+
+If you want to add guuid's to extisting records, you can use the following code in a Rails Console:
+
+```
+a = Account.all
+i = 0
+a.each do |b|
+	b.external_id__c = SecureRandom.uuid + Time.now().to_i.to_s
+	b.save
+	i += 1
+	puts i
+end
+```
+
+This will load each object, and update the external_id__c feild with a random guuid.
+
+Enjoy!
