@@ -43,12 +43,15 @@ Map the following fields over in Heroku Connect, or just import the `ggn-hcdemo_
  * billingstate
  * billingstreet
  * description
+ * external_id__c
  * fax
  * name
  * phone
  * recordtypeid
  * tickersymbol
  * website
+
+You will also need to point the External ID for upserts in Connect to `external_id__c`.
 
 After your first sync, your Postgres table should look like this (use `\d salesforce.account` in `heroku pg:psql` to view it)
 
