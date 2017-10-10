@@ -1,7 +1,7 @@
 HCRailsDemo
 ===========
 
-Just a rails CRUD app to demo Heroku connect. It is set up to sync the Account object down. It relies on a field called external_id__c as it's external ID for upserts.
+Just a rails CRUD app to demo Heroku connect. It is set up to sync the Account object down. It relies on a field called external_id__c as it's external ID for upserts. The rails app will do the "right thing" and automatically generate a guid for any records created there. It's left up to the gentle reader to extend their salesforce org to "do the right thing" and generate a guid 
 
 Setup
 =====
@@ -95,7 +95,7 @@ heroku open
 ```
 Profit
 
-If you want to add guuid's to extisting records, you can use the following code in a Rails Console:
+If you want to add guid's to extisting records, you can use the following code in a Rails Console:
 
 ```
 a = Account.all
@@ -108,6 +108,6 @@ a.each do |b|
 end
 ```
 
-This will load each object, and update the external_id__c feild with a random guuid.
+This will load each object, and update the external_id__c feild with a random guid.
 
 Enjoy!
