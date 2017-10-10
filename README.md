@@ -1,12 +1,10 @@
 HCRailsDemo
 ===========
 
-Just a rails CRUD app to demo Heroku connect.
-
+Just a rails CRUD app to demo Heroku connect. It is set up to sync the Account object down. It relies on a field called external_id__c as it's external ID for upserts.
 
 Setup
 =====
-
 
 Get a trial force org. If you do not have an external id field called `external_id__c` you will need to create one in your org. You need to insure that it's a text field and it's set up as an external id.
 
