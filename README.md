@@ -55,30 +55,41 @@ You will also need to point the External ID for upserts in Connect to `external_
 
 After your first sync, your Postgres table should look like this (use `\d salesforce.account` in `heroku pg:psql` to view it)
 
-                                                Table "salesforce.account"
-          Column       |            Type             |                            Modifiers                            
-    -------------------+-----------------------------+-----------------------------------------------------------------
-     billingstate      | character varying(80)       |
-     fax               | character varying(40)       |
-     billinglatitude   | double precision            |
-     accountsource     | character varying(40)       |
-     billingcity       | character varying(40)       |
-     id                | integer                     | not null default nextval('salesforce.account_id_seq'::regclass)
-     billingcountry    | character varying(80)       |
-     _c5_source        | character varying(18)       |
-     name              | character varying(255)      |
-     accountnumber     | character varying(40)       |
-     billingpostalcode | character varying(20)       |
-     description       | text                        |
-     sfid              | character varying(18)       |
-     billingstreet     | character varying(255)      |
-     isdeleted         | boolean                     |
-     billinglongitude  | double precision            |
-     lastmodifieddate  | timestamp without time zone |
-     phone             | character varying(40)       |
-     website           | character varying(255)      |
-     tickersymbol      | character varying(20)       |
-     recordtypeid      | character varying(18)       |
+```
+hcrails-dev::DATABASE=> \d salesforce.account
+                                            Table "salesforce.account"
+      Column       |            Type             |                            Modifiers                            
+-------------------+-----------------------------+-----------------------------------------------------------------
+ lastmodifieddate  | timestamp without time zone | 
+ billingstreet     | character varying(255)      | 
+ website           | character varying(255)      | 
+ createddate       | timestamp without time zone | 
+ billingpostalcode | character varying(20)       | 
+ _hc_lastop        | character varying(32)       | 
+ name              | character varying(255)      | 
+ billinglongitude  | double precision            | 
+ billingcountry    | character varying(80)       | 
+ description       | text                        | 
+ external_id__c    | character varying(128)      | 
+ _hc_err           | text                        | 
+ accountsource     | character varying(40)       | 
+ phone             | character varying(40)       | 
+ billinglatitude   | double precision            | 
+ isdeleted         | boolean                     | 
+ billingcity       | character varying(40)       | 
+ id                | integer                     | not null default nextval('salesforce.account_id_seq'::regclass)
+ fax               | character varying(40)       | 
+ billingstate      | character varying(80)       | 
+ sfid              | character varying(18)       | 
+Indexes:
+    "account_pkey" PRIMARY KEY, btree (id)
+    "hcu_idx_account_external_id__c" UNIQUE, btree (external_id__c)
+    "hcu_idx_account_sfid" UNIQUE, btree (sfid)
+    "hc_idx_account_lastmodifieddate" btree (lastmodifieddate)
+Triggers:
+    hc_account_logtrigger AFTER INSERT OR DELETE OR UPDATE ON salesforce.account FOR EACH ROW WHEN (get_xmlbinary()::text = 'base64'::text) EXECUTE PROCEDURE salesforce.hc_account_logger()
+    hc_account_status_trigger BEFORE INSERT OR UPDATE ON salesforce.account FOR EACH ROW EXECUTE PROCEDURE salesforce.hc_account_status()
+```
 
 Launch the app
 ```
