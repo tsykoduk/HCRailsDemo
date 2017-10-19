@@ -93,7 +93,7 @@ Launch the app
 ```
 heroku open
 ```
-Profit
+Beer
 
 If you want to add guid's to extisting records, you can use the following code in a Rails Console:
 
