@@ -20,7 +20,6 @@ cd HCRailsDemo
 heroku create
 heroku addons:create herokuconnect:demo
 heroku addons:add papertrail
-heroku addons:add newrelic:stark
 git push heroku master
 ```
 
