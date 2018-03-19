@@ -52,4 +52,5 @@ gem 'newrelic_rpm'
 
 # For random stuff
 gem 'faker'
+gem 'populator'
 

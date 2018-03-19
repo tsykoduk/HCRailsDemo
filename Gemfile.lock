@@ -85,6 +85,7 @@ GEM
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     pg (1.0.0)
+    populator (1.0.0)
     puma (3.11.2)
     rack (2.0.3)
     rack-test (0.8.2)
@@ -176,6 +177,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   newrelic_rpm
   pg
+  populator
   puma (~> 3.0)
   rails
   rails_12factor
@@ -189,4 +191,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
