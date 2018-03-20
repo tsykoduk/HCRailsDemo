@@ -1,8 +1,8 @@
 require 'faker'
 
+run_times = 6400
 
-
-6400.times do
+runtimes.times do
 	acct = Account.new
 	acct.name = Faker::Company.name
 	acct.billingcountry = Faker::Address.country
@@ -17,5 +17,6 @@ require 'faker'
  	acct.billingpostalcode = Faker::Address.postcode
 	acct.phone = Faker::PhoneNumber.phone_number
 	acct.fax = Faker::PhoneNumber.phone_number
+  acct.external_id__c = SecureRandom.uuid + Time.now().to_i.to_s
   acct.save!
 end
