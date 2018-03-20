@@ -32,6 +32,7 @@ module AccountHelper
   	  i += 1
   	  puts i
     end
+    a = []
     puts "all done!"
   end
 
