@@ -20,6 +20,19 @@ module AccountHelper
       new_acct.save!
     end
   end
+  
+  def guiid_creator()
+    a = Account.all
+    i = 0
+    a.each do |b|
+  	  if b.external_id__c.nil?
+  		  b.external_id__c = SecureRandom.uuid + Time.now().to_i.to_s
+  		  b.save
+  	  end
+  	  i += 1
+  	  puts i
+    end
+  end
 
 
 end
