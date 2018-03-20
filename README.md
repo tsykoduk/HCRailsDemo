@@ -94,20 +94,7 @@ heroku open
 ```
 Profit
 
-If you want to add guid's to existing records, you can use the following code in a Rails Console:
-
-```
-a = Account.all
-i = 0
-a.each do |b|
-	b.external_id__c = SecureRandom.uuid + Time.now().to_i.to_s
-	b.save
-	i += 1
-	puts i
-end
-```
-
-This will load each object, and update the external_id__c field with a random guid.
+If you want to add guid's to existing records, you can open a console using `heroku run console` and then run `helper guuid_creator`. This will load each object, and update the external_id__c field with a random guid if one does not already exist.
 
 If you want to load more accounts, follow the steps above to deploy and set up the demo. Then simply pop open a Rails Console with `heroku run console`. Once you have a console up and running run `helper.account_loader(#)` where # is the number of records you want to create.
 

@@ -21,7 +21,7 @@ module AccountHelper
     end
   end
   
-  def guiid_creator()
+  def guuid_creator()
     a = Account.all
     i = 0
     a.each do |b|
@@ -32,6 +32,7 @@ module AccountHelper
   	  i += 1
   	  puts i
     end
+    puts "all done!"
   end
 
 
