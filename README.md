@@ -48,7 +48,7 @@ Map the following fields over in Heroku Connect, or just import the `ggn-hcdemo_
  * tickersymbol
  * website
 
-You will also need to point the External ID for upserts in Connect to `external_id__c`. 
+You will also need to point the External ID for upserts in Connect to `external_id__c`. If you have a starting SFDC demo org, you should create a the `external_id__c` custom field.
 
 After your first sync, your Postgres table should look like this (use `\d salesforce.account` in `heroku pg:psql` to view it)
 
