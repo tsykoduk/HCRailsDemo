@@ -1,22 +1,23 @@
 module AccountHelper
   
-  def account_loader(number)
-    number.times do
-	    acct = Account.new
-	    acct.name = Faker::Company.name
-      acct.billingcountry = Faker::Address.country
-	    acct.billinglatitude = Faker::Address.latitude
-      acct.description = Faker::Company.catch_phrase
-	    acct website = "http://example.com"
-	    acct.billinglongitude Faker::Address.longitude
-	    acct.billingstate Faker::Address.state
-	    acct.billingstreet = Faker::Address.street_address
-	    acct.tickersymbol Faker::Space.agency_abv
-	    acct.billingcity = Faker::Address.city
- 	    acct.billingpostalcode = Faker::Address.postcode
-	    acct.phone = Faker::PhoneNumber.phone_number
-	    acct.fax = Faker::PhoneNumber.phone_number
-      acct.save!
+  def account_loader(runs)
+    runs.times do
+      new_acct = Account.new
+	    new_acct.name = Faker::Company.name
+      new_acct.billingcountry = Faker::Address.country
+	    new_acct.billinglatitude = Faker::Address.latitude
+      new_acct.description = Faker::Company.catch_phrase
+	    new_acct.website = "http://example.com"
+	    new_acct.billinglongitude = Faker::Address.longitude
+	    new_acct.billingstate = Faker::Address.state
+	    new_acct.billingstreet = Faker::Address.street_address
+	    #new_acct.tickersymbol Faker::Space.agency_abv
+	    new_acct.billingcity = Faker::Address.city
+ 	    new_acct.billingpostalcode = Faker::Address.postcode
+	    new_acct.phone = Faker::PhoneNumber.phone_number
+	    new_acct.fax = Faker::PhoneNumber.phone_number
+      new_acct.external_id__c = SecureRandom.uuid + Time.now().to_i.to_s
+      new_acct.save!
     end
   end
 
