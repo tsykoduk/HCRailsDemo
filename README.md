@@ -109,7 +109,7 @@ end
 
 This will load each object, and update the external_id__c field with a random guid.
 
-If you want to load more accounts, simply pop open a Rails Console with `heroku run console`. You'll want to insure that you've already taken all of the steps above as well. Once you have a console up and running run `helper.account_loader(#)` where # is the number of records you want to create.
+If you want to load more accounts, follow the steps above to deploy and set up the demo. Then simply pop open a Rails Console with `heroku run console`. Once you have a console up and running run `helper.account_loader(#)` where # is the number of records you want to create.
 
 
 Enjoy!
