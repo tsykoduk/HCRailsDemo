@@ -1,6 +1,6 @@
 module AccountHelper
   
-  def loader (number)
+  def account_loader(number)
     number.times do
 	    acct = Account.new
 	    acct.name = Faker::Company.name
