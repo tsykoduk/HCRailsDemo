@@ -92,6 +92,7 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pg (1.0.0)
+    populator (1.0.0)
     puma (3.11.4)
     rack (2.0.5)
     rack-test (1.0.0)
@@ -184,6 +185,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   newrelic_rpm
   pg
+  populator
   puma
   rails
   rails_12factor

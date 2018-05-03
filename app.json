@@ -9,6 +9,6 @@
   "env": {
     "RAILS_ENV": "production"
   },
-  "addons": ["heroku-postgresql", "papertrail", "heroku-redis:hobby-dev"]
+  "addons": ["heroku-postgresql", "heroku-redis:hobby-dev"]
 
 }

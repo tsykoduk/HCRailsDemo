@@ -6,7 +6,7 @@ gem 'rails'
 # Use PG as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
-gem 'puma' #, '~> 3.0'
+gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails' #, '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -52,4 +52,5 @@ gem 'newrelic_rpm'
 
 # For random stuff
 gem 'faker'
+gem 'populator'
 
