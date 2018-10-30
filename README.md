@@ -99,4 +99,4 @@ If you want to add guid's to existing records, you can open a console using `her
 If you want to load more accounts, follow the steps above to deploy and set up the demo. Then simply pop open a Rails Console with `heroku run console`. Once you have a console up and running run `helper.account_loader(#)` where # is the number of records you want to create.
 
 
-Enjoy!
+Enjoy
