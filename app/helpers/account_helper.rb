@@ -4,9 +4,9 @@ module AccountHelper
     runs.times do
       new_acct = Account.new
 	    new_acct.name = Faker::Company.name
-      new_acct.billingcountry = Faker::Address.country
+            new_acct.billingcountry = Faker::Address.country
 	    new_acct.billinglatitude = Faker::Address.latitude
-      new_acct.description = Faker::Company.catch_phrase
+            new_acct.description = Faker::Company.catch_phrase
 	    new_acct.website = "http://example.com"
 	    new_acct.billinglongitude = Faker::Address.longitude
 	    new_acct.billingstate = Faker::Address.state
