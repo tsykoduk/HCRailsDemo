@@ -152,6 +152,9 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
+    turbolinks (5.2.0)
+      turbolinks-source (~> 5.2)
+    turbolinks-source (5.2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
@@ -183,6 +186,7 @@ DEPENDENCIES
   sass-rails
   spring
   spring-watcher-listen (~> 2.0.0)
+  turbolinks
   tzinfo-data
   uglifier
   web-console (>= 3.3.0)
