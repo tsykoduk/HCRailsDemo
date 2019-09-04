@@ -1,12 +1,12 @@
 HCRailsDemo
 ===========
 
-Just a rails CRUD app to demo Heroku connect. It is set up to sync the Account object down. It relies on a field called external_id__c as it's external ID for upserts. The rails app will do the "right thing" and automatically generate a guid for any records created there. It's left up to the gentle reader to extend their salesforce org to "do the right thing" and generate a guid 
+Just a rails CRUD app to demo Heroku connect. It is set up to sync the Account object down. It relies on a field called external_id__c as it's external ID for upserts. The rails app will do the "right thing" and automatically generate a guid for any records created there. It's left up to the gentle reader to extend their salesforce org to "do the right thing" and generate a guid on the account object.
 
 Setup
 =====
 
-Get a trial force org. If you do not have an external id field called `external_id__c` you will need to create one in your org. You need to insure that it's a text field and it's set up as an external id.
+Get a trial force org. If you do not have an external id field called `external_id__c` you will need to create one in your on the account object in Salesforce. You need to insure that it's a text field and it's set up as an external id.
 
 Click on this button:
 
@@ -94,7 +94,7 @@ heroku open
 ```
 Profit
 
-If you want to add guid's to existing records, you can open a console using `heroku run console` and then run `helper.guuid_creator`. This will load each object, and update the external_id__c field with a random guid if one does not already exist. Warning, this could take a long time.
+If you want to add guid's to existing records, you can open a console using `heroku run console` and then run `helper.guuid_creator`. This will load each record in the account object, and update the external_id__c field with a random guid if one does not already exist. This could take some time.
 
 If you want to load more accounts, follow the steps above to deploy and set up the demo. Then simply pop open a Rails Console with `heroku run console`. Once you have a console up and running run `helper.account_loader(#)` where # is the number of records you want to create.
 
