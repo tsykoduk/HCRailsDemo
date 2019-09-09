@@ -15,7 +15,7 @@ module AccountHelper
 	    new_acct.billingstreet = Faker::Address.street_address
 	    #new_acct.tickersymbol Faker::Space.agency_abv
 	    new_acct.billingcity = Faker::Address.city
- 	    new_acct.billingpostalcode = Faker::Address.postcode
+	    new_acct.billingpostalcode = Faker::Address.postcode
 	    new_acct.phone = Faker::PhoneNumber.phone_number
 	    new_acct.fax = Faker::PhoneNumber.phone_number
       new_acct.external_id__c = SecureRandom.uuid + Time.now().to_i.to_s
