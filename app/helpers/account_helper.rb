@@ -1,6 +1,8 @@
 module AccountHelper
   
   def account_loader(runs)
+    #To load accounts;
+    # Open a rails console and run helper.account_loader(NUNBER)
     runs.times do
       new_acct = Account.new
 	    new_acct.name = Faker::Company.name
@@ -18,6 +20,8 @@ module AccountHelper
 	    new_acct.fax = Faker::PhoneNumber.phone_number
       new_acct.external_id__c = SecureRandom.uuid + Time.now().to_i.to_s
       new_acct.save!
+      i +=
+      puts i
     end
   end
   
