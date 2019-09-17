@@ -70,7 +70,7 @@ GEM
     crass (1.0.4)
     erubi (1.8.0)
     execjs (2.7.0)
-    faker (2.2.2)
+    faker (2.3.0)
       i18n (~> 1.6.0)
     ffi (1.11.1)
     globalid (0.4.2)
