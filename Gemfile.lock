@@ -214,7 +214,7 @@ DEPENDENCIES
   newrelic_rpm
   pg
   populator
-  puma (~> 3.11)
+  puma
   rails (~> 6.0.0)
   sass-rails (~> 5)
   selenium-webdriver
