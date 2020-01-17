@@ -2,7 +2,7 @@ module AccountHelper
   
   def account_loader(runs)
     #To load accounts;
-    # Open a rails console and run helper.account_loader(NUNBER)
+    # Open a rails console and run helper.account_loader(NUMBER)
     runs.times do
       new_acct = Account.new
 	    new_acct.name = Faker::Company.name
