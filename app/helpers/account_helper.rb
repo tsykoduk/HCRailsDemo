@@ -20,8 +20,6 @@ module AccountHelper
 	    new_acct.fax = Faker::PhoneNumber.phone_number
       new_acct.external_id__c = SecureRandom.uuid + Time.now().to_i.to_s
       new_acct.save!
-      i +=
-      puts i
     end
   end
   

@@ -1,7 +1,10 @@
-<h1>Editing <%= @account.name %></h1>
+<div class="center">
+	
+	<h1>Editing <%= @account.name %></h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Show', @account %> |
-<%= link_to 'List All Accounts', accounts_path %> |
-<%= link_to 'Destroy', @account, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= link_to 'Show', @account %> |
+	<%= link_to 'List All Accounts', accounts_path %> |
+	<%= link_to 'Destroy', @account, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
