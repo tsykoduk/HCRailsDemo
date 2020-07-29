@@ -1,0 +1,21 @@
+setup:
+  addons:
+    - plan: 'herokuconnect:test'
+      as: HEROKUCONNECT
+    - plan: 'heroku-postgresql:standard-0'
+      as: DATABASE
+  config:
+    LANG: en_US.UTF-8
+    RACK_ENV: production
+    RAILS_ENV: production
+    RAILS_LOG_TO_STDOUT: enabled
+    RAILS_SERVE_STATIC_FILES: enabled
+    SECRET_KEY_BASE: >-
+      73366131e45e9c1b5a860caca223f3c013f77bef5c41552955fa4c71a3304a2d87062a7076328dc8b9a6a70b4f1a143f5cf64c5ec9529062155ccb111b78bfdb
+build:
+  languages:
+    - ruby
+run:
+  rake: bundle exec rake
+  console: bin/rails console
+  web: bundle exec puma -C config/puma.rb
