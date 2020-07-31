@@ -14,7 +14,7 @@ def gorun()
 
   while length > 1 do
       puts "starting update at " + Time.now.to_s
-      system("curl -H 'Authorization: Bearer 00Df4000003jUAV!AQcAQMIrbDWFK5ZEAzt3h5N87AXfo8ADYlQ8Cfjt0ypY8sFUStcuQqr7OFJDABnpx3t_StuFvSB2op_5gxJvUn_wkQg7PV4n' https://rainbow.my.salesforce.com/services/apexrest/massAccountTagger")
+      system("curl -H 'Authorization: Bearer 00Df4000003jUAV!AQcAQMIrbDWFK5ZEAzt3h5N87AXfo8ADYlQ8Cfjt0ypY8sFUStcuQqr7OFJDABnpx3t_StuFvSB2op_5gxJvUn_wkQg7PV4n' https://rainbow.my.salesforce.com/services/apexrest/massAccountTagger -o /dev/null")
       puts "Sleep for 60 seconds at " + Time.now.to_s
       sleep(60)
   end
