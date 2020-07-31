@@ -15,12 +15,13 @@ end
 def dbrunner()
   puts "starting database update at " + Time.now.to_s
   x = 0
-  acc = Account.order(:lastmodifieddate).last.limit(1000)
-  acc.each do |a|
+#  acc = Account.find_all_by_phone('5555551212')
+  this_run = Account.where(phone: '5555551212').count
+  Account.where(phone: '5555551212').find_each do |a|
     new_phone = Faker::PhoneNumber.phone_number
     a.update(phone: new_phone)
     x += 1
-    puts "update account " + acc.name + ", number " + x.to_s + " of 500"
+    puts "update account " + a.name + ", number " + x.to_s + " of " + this_run.to_s
   end
 end
 
