@@ -19,9 +19,11 @@ def dbrunner()
   this_run = Account.where(phone: '5555551212').count
   Account.where(phone: '5555551212').find_each do |a|
     new_phone = Faker::PhoneNumber.phone_number
-    a.update(phone: new_phone)
-    x += 1
-    puts "update account " + a.name + ", number " + x.to_s + " of " + this_run.to_s
+    if a.phone == 555551212.to_i
+      a.update(phone: new_phone)
+      x += 1
+      puts "update account " + a.name + ", number " + x.to_s + " of " + this_run.to_s
+    end
   end
 end
 
@@ -29,9 +31,8 @@ def runner()
   length = Float::INFINITY
   while length > 1 do
     sfdcrunner()
-    dbrunner()
-    puts "Sleeping for 60 seconds...."
     sleep(60)
+    dbrunner()
   end
 end
     
