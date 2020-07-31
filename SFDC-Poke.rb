@@ -1,27 +1,38 @@
 #!/usr/bin/env ruby
 
+ENV['RAILS_ENV'] = ARGV.first || ENV['RAILS_ENV'] || 'development'
+require File.expand_path(File.dirname(__FILE__) + "/config/environment")
 
 
-# This will run tests with random delays between each request.
-# It will also ramp up RPS during certian hours and ramp down others to simulate load peaks
-# It's best to run this in continuous mode
-
-def gorun()
+def sfdcrunner()
   
-  length = Float::INFINITY
-
-  puts "Starting a Drip Campaign..."
-
-  while length > 1 do
-      puts "starting update at " + Time.now.to_s
-      system("curl -s -H 'Authorization: Bearer 00Df4000003jUAV!AQcAQMIrbDWFK5ZEAzt3h5N87AXfo8ADYlQ8Cfjt0ypY8sFUStcuQqr7OFJDABnpx3t_StuFvSB2op_5gxJvUn_wkQg7PV4n' https://rainbow.my.salesforce.com/services/apexrest/massAccountTagger > /dev/null")
-      puts "Sleep for 60 seconds at " + Time.now.to_s
-      sleep(60)
-  end
-
-  #after everything is done, just sleep the sleep of the victorious.
-  #this is just to keep the process from crashing and getting restarted
+  puts "starting SFDC update at " + Time.now.to_s
+  system("curl -s -H 'Authorization: Bearer 00Df4000003jUAV!AQcAQMIrbDWFK5ZEAzt3h5N87AXfo8ADYlQ8Cfjt0ypY8sFUStcuQqr7OFJDABnpx3t_StuFvSB2op_5gxJvUn_wkQg7PV4n' https://rainbow.my.salesforce.com/services/apexrest/massAccountTagger > /dev/null")
+  puts "Finished update at " + Time.now.to_s
 
 end
 
-gorun()
+def dbrunner()
+  puts "starting database update at " + Time.now.to_s
+  x = 0
+  acc = Account.order(:lastmodifieddate).last.limit(1000)
+  acc.each do |a|
+    new_phone = Faker::PhoneNumber.phone_number
+    a.update(phone: new_phone)
+    x += 1
+    puts "update account " + acc.name + ", number " + x.to_s + " of 500"
+  end
+end
+
+def runner()
+  length = Float::INFINITY
+  while length > 1 do
+    sfdcrunner()
+    dbrunner()
+    puts "Sleeping for 60 seconds...."
+    sleep(60)
+  end
+end
+    
+    
+runner()
