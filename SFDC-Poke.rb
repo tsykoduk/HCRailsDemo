@@ -19,11 +19,9 @@ def dbrunner()
   this_run = Account.where(phone: '5555551212').count
   Account.where(phone: '5555551212').find_each do |a|
     new_phone = Faker::PhoneNumber.phone_number
-    if a.phone == 555551212.to_i
       a.update(phone: new_phone)
       x += 1
       puts "update account " + a.name + ", number " + x.to_s + " of " + this_run.to_s
-    end
   end
 end
 
