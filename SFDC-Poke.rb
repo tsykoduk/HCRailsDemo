@@ -34,7 +34,7 @@ def runner()
   length = Float::INFINITY
   while length > 1 do
     sfdcrunner()
-    sleep(60)
+    sleep(15)
     dbrunner()
   end
 end
