@@ -88,10 +88,12 @@ Triggers:
     hc_account_status_trigger BEFORE INSERT OR UPDATE ON salesforce.account FOR EACH ROW EXECUTE PROCEDURE salesforce.hc_account_status()
 ```
 
-Launch the app
+Launch the app:
+
 ```
 heroku open
 ```
+
 Profit
 
 If you want to add guuids to existing records, you can open a console using `heroku run console` and then run `helper.guuid_creator`. This will load each record in the account object, and update the external_id__c field with a random guid if one does not already exist. This could take some time.
