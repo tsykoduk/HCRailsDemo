@@ -70,3 +70,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+# For random stuff
+gem 'faker'
+gem 'populator'
